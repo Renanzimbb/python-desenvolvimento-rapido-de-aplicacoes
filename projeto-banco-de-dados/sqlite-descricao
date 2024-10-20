@@ -1,0 +1,48 @@
+Apesar de parecer um número limitado de classes, quando comparado com outros bancos de dados, o SQLite suporta o
+conceito de afinidades de tipo para as colunas.
+
+No SQLite, quando definimos uma coluna durante a criação de uma tabela, ao invés de especificar um tipo estático,
+dizemos qual a afinidade dela. Isso nos permite armazenar diferentes tipos de dados em uma mesma coluna. Observe as
+afinidades disponíveis a seguir:
+
+TEXT
+Coluna para armazenar dados das classes NULL, TEXT e BLOB.
+
+NUMERIC
+Coluna para armazenar dados de qualquer uma das cinco classes.
+
+INTEGER
+Similar ao NUMERIC, diferenciando apenas no processo de conversão de valores.
+
+REAL
+Similar ao NUMERIC, porém os valores inteiros são forçados a serem representados como ponto flutuante.
+
+NONE
+Coluna sem preferência de armazenamento, não é realizada nenhuma conversão de valores.
+
+
+
+CONNECT
+Função global do conector para criar uma conexão com o banco de dados.
+Retorna um objeto do tipo Connection.
+
+
+
+CONNECT
+Função global do conector para criar uma conexão com o banco de dados.
+Retorna um objeto do tipo Connection.
+CONNECTION
+Classe utilizada para gerenciar todas as operações no banco de dados.
+Principais métodos:
+commit: Confirma todas as operações pendentes;
+rollback: Desfaz todas as operações pendentes;
+cursor: Retorna um objeto do tipo Cursor; e
+close: Encerra a conexão com o banco de dados.
+
+
+CURSOR
+Classe utilizada para enviar os comandos ao banco de dados.
+Principais métodos:
+execute: Prepara e executa a operação passada como parâmetro;
+fetchone: Retorna a próxima linha encontrada por uma consulta; e
+fetchall: Retorna todas as linhas encontradas por uma consulta.
